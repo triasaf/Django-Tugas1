@@ -3,7 +3,8 @@
 Tautan untuk aplikasi yang sudah di-*deploy*: https://djangoprojecttugas2.herokuapp.com/katalog/
 
 ## Bagan 
-![image]("D:\TRIAS\Matkul\Semester 3\PBP E\Tugas\Tugas 2\Bagan MVT.png")
+[Gambar bagan](https://drive.google.com/file/d/1jvi2CXSATXIeYz7NB3_FmwCaGCefvBMV/view?usp=sharing)
+
 
 ## Virtual Environment
 
@@ -11,7 +12,7 @@ Tautan untuk aplikasi yang sudah di-*deploy*: https://djangoprojecttugas2.heroku
 Virtual environment adalah sebuah Python environment yang memungkinkan isolasi dari instalasi Python interpreter, libraries, dan scripts dengan yang ada pada local. Isolasi ini diperlukan agar setiap project yang dibuat dapat dispesifikasi keperluan-keperluannya, seperti versi Python dan library yang di-install. Versi Python dan library yang berbeda untuk setiap project merupakan hal yang cukup sering ditemukan dalam industri pengembangan web.
 
 ### Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
-Ya, kita tetap dapat membuat aplikasi Django tanpa menggunakan sebuah virtual environment. Namun, seperti yang sudah dijelaskan tadi, perlu diperhatikan versi Python beserta versi libraries yang digunakan pada aplikasi tersebut dengan yang ter-install pada local.
+Ya, kita tetap dapat membuat aplikasi Django tanpa menggunakan sebuah virtual environment. Namun, seperti yang sudah dijelaskan tadi, perlu diperhatikan versi Python beserta versi libraries yang digunakan pada aplikasi tersebut dengan yang ter-install pada local.  
 
 ## Implementasi MVT
 
