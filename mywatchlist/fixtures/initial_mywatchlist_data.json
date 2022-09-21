@@ -1,0 +1,112 @@
+[
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 1,
+        "fields": {
+            "watched": "Yes",
+            "title": "The Pianist",
+            "rating": 4.0,
+            "release_date": "September 6, 2002",
+            "review": "A tragic story with heart wrenching moments, that piano solo by the moonlight.."
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 2,
+        "fields": {
+            "watched": "Yes",
+            "title": "PENGABDI SETAN 2: COMMUNION",
+            "rating": 3.7,
+            "release_date": "August 4, 2022",
+            "review": "Enjoyed it, but felt like there were some jumpscares for the sake of jumpscares. Not really a fan"
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 3,
+        "fields": {
+            "watched": "No",
+            "title": "Mencuri Raden Saleh",
+            "rating": 4.2,
+            "release_date": "August 25, 2022",
+            "review": "Heard praises about this movie, haven't watched it myself"
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 4,
+        "fields": {
+            "watched": "No",
+            "title": "Doctor Strange in the Multiverse of Madness",
+            "rating": 3.5,
+            "release_date": "May 5, 2022",
+            "review": "Mixed opinions about this. Many are disappointed because of the characters treatment from MCU, many liked it because of the freshness it brought"
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 5,
+        "fields": {
+            "watched": "Yes",
+            "title": "Knives Out",
+            "rating": 4.5,
+            "release_date": "November 27, 2019",
+            "review": "Doesn't watch many crime movies, but this one really set my bar up for that genre. Definitely a must watch"
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 6,
+        "fields": {
+            "watched": "Yes",
+            "title": "The Batman",
+            "rating": 4.8,
+            "release_date": "March 2, 2022",
+            "review": "SOMETHINGG IN THE WAY. Jokes aside, I loved this movie, happily sat through the whole 3 hours"
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 7,
+        "fields": {
+            "watched": "No",
+            "title": "Thor: Love and Thunder",
+            "rating": 3.2,
+            "release_date": "July 6, 2022",
+            "review": "Overall negative sentiments about this one.., set off the MCU to a bad path they say, and just a mediocre movie in general."
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 8,
+        "fields": {
+            "watched": "Yes",
+            "title": "The Boys Season 1",
+            "rating": 4.3,
+            "release_date": "July 26, 2019",
+            "review": "DIABOLICAL!! Started off really strong and continued it throughout."
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 9,
+        "fields": {
+            "watched": "Yes",
+            "title": "Kimi No Na Wa",
+            "rating": 4.6,
+            "release_date": "December 7, 2016",
+            "review": "Just a classic. Lovely, wholesome (ending) film with memorable moments."
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 10,
+        "fields": {
+            "watched": "No",
+            "title": "Jujutsu Kaisen 0",
+            "rating": 4.1,
+            "release_date": "March 16, 2022",
+            "review": "I don't know anything about this film, but I have the merch and it's cool"
+        }
+    }
+]
