@@ -13,13 +13,26 @@ context = {
 
 # Create your views here.
 def show_mywatchlist(request):
+    list_watchlist = MyWatchList.objects.all()
+
+    context = {
+    'list_item' : list_watchlist,
+    'name' : 'Trias Ahmad Fairuz',
+    'id' : '2106633645'
+}
 
     return render(request, "mywatchlist.html", context)
 
 def show_mywatchlist_xml(request):
 
+    list_watchlist = MyWatchList.objects.all()
+
+
     return HttpResponse(serializers.serialize("xml", list_watchlist), content_type="application/xml")
 
 def show_mywatchlist_json(request):
+
+    list_watchlist = MyWatchList.objects.all()
+
 
     return HttpResponse(serializers.serialize("json", list_watchlist), content_type="application/json")
