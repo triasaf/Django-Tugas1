@@ -1,4 +1,5 @@
 from django.test import TestCase, Client
+from django.urls import resolve
 
 class TestUrl(TestCase):
     def test_html(self):
