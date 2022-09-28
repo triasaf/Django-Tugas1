@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Assignment 4 PBP/PBD</h1>
+
+<h5>Name: </h5>
+<p>{{name}}</p>
+
+<h5>Student ID: </h5>
+<p>{{id}}</p>
+
+<h4>Selamat Datang, {{username}}</h4>
+
+<button><a href="{% url 'todolist:create_task' %}">Add New Task</a></button>
+
+<table>
+  <tr>
+    <th>✅</th>
+    <th>Date</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Finished</th>
+    <th>Delete</th>
+  </tr>
+
+  {% for task in list_task %}
+  <tr>
+    <td> <button><a href="{% url 'todolist:finishtask' task.id %}" title = "">Finish</a></button> </td>
+    <td>{{task.date}}</td>
+    <td>{{task.title}} </td>
+    <td>{{task.description}} </td>
+    <td>{{task.is_finished}}</td>
+    <td> <button><a href="{% url 'todolist:deletetask' task.id %}" title = "">Delete</a></button> </td>
+  </tr>
+  {% endfor %}
+
+ 
+</table>
+
+<h5>Sesi terakhir login: {{ last_login }}</h5>
+
+<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+
+<p>{{is_finished}}</p>
+
+{% endblock content %}
