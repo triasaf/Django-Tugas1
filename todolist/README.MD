@@ -17,9 +17,6 @@ Jika tidak ada csrf token, aplikasi akan tetap berjalan dengan semestinya, tetap
 Referensi: https://stackoverflow.com/questions/5207160/what-is-a-csrf-token-what-is-its-importance-and-how-does-it-work
 
 ## Apakah kita dapat membuat elemen `<form>` secara manual (tanpa menggunakan generator seperti {{ form.as_table }})? 
-Kita bisa saja membuat elemen form tanpa menggunakan form.as_table. Jika menggunakan itu, mungkin ada beberapa variable yang ada di database tidak memerlukan di-POST sehingga kita dapat membuat form manual untuk mengatasinya. 
-
-
 Ya, kita bisa membuat elemen form secara manual tanpa generator 
 
 ## Jelaskan secara gambaran besar bagaimana cara membuat `<form>` secara manual.
