@@ -4,9 +4,9 @@
 <title>Registrasi Akun</title>
 {% endblock meta %}
 
-{% block content %}  
+{% block content %}
 
-<div class = "login">
+<!-- <div class = "register">
     
     <h1>Formulir Registrasi</h1>  
 
@@ -29,6 +29,55 @@
         </ul>   
     {% endif %}
 
-</div>  
+</div> -->
+<div class="register">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <section class="vh-100 gradient-custom">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center
+                    h-100">
+                    <div class="col-12 col-md-60 col-lg-6 col-xl-5">
+                        <div class="card bg-dark text-white"
+                            style="border-radius: 1rem;">
+                            <div class="card-body p-5 text-center">
+
+                                <div class="mb-md-20 mt-md-20 pb-50">
+
+                                    <h2 class="fw-bold mb-2 text-uppercase">Registration</h2>
+                                    <table class="text-start table
+                                        table-borderless vertical-align
+                                        form-control" style="font-size: small;">
+                                        {{ form.as_table }}
+
+                                    </table>
+
+                                    <input class="btn login_btn btn btn-primary
+                                        form-control" type="submit"
+                                        name="submit" value="Create!"/>
+
+                                </div>
+
+                                <div style="text-align: center;">
+                                    {% if messages %}
+                                    <ul>
+                                        {% for message in messages %}
+                                        <div class="alert alert-danger"
+                                            role="alert">
+                                            {{ message }}
+                                        </div>
+                                        {% endfor %}
+                                    </ul>
+                                    {% endif %}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+</div>
 
 {% endblock content %}

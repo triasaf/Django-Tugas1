@@ -4,41 +4,42 @@
 
 <h1>Assignment 4 PBP/PBD</h1>
 
-<h5>Name: </h5>
-<p>{{name}}</p>
-
-<h5>Student ID: </h5>
-<p>{{id}}</p>
 
 <h4>Selamat Datang, {{username}}</h4>
 
 <button><a href="{% url 'todolist:create_task' %}">Add New Task</a></button>
 
-<table>
-  <tr>
-    <th>✅</th>
-    <th>Date</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Finished</th>
-    <th>Delete</th>
-  </tr>
 
-  {% for task in list_task %}
-  <tr>
-    <td> <button><a href="{% url 'todolist:finishtask' task.id %}" title = "">Finish</a></button> </td>
-    <td>{{task.date}}</td>
-    <td>{{task.title}} </td>
-    <td>{{task.description}} </td>
-    <td>{{task.is_finished}}</td>
-    <td> <button><a href="{% url 'todolist:deletetask' task.id %}" title = "">Delete</a></button> </td>
-  </tr>
-  {% endfor %}
 
- 
-</table>
+<div class="container mx-auto mt-4">
+  <div class="row">
+    {% for task in list_task %}
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img src="https://drive.google.com/uc?export=view&id=17KEpEig6Y5PX9nUwZl1INRzj9Xuuz9NS" class="card-img-top"
+          alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{task.title}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{task.date}}</h6>
+          <p class="card-text">{{task.description}}</p>
+          <p class="card-text"></p>
+          {% if task.is_finished %}
+          <p class="card-text">Finished</p>
+          {% else %}
+          <p class="card-text">Not Finished</p>
+          {% endif %}
+          <a href="{% url 'todolist:finishtask' task.id %}" class="btn mr-2"><i
+              class="fas fa-link"></i> Finish</a>
+          <a href="{% url 'todolist:deletetask' task.id %}" class="btn "><i
+              class="fab fa-link"></i> Delete</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
 
-<h5>Sesi terakhir login: {{ last_login }}</h5>
+<!-- <h5>Sesi terakhir login: {{ last_login }}</h5> -->
 
 <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
 
