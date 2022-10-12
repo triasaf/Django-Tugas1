@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from todolist.models import Task
 
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseNotFound, JsonResponse
 from django.core import serializers
 from django.shortcuts import redirect
 from django.contrib.auth.forms import UserCreationForm
@@ -12,8 +12,39 @@ from django.contrib.auth.decorators import login_required
 import datetime
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.views.decorators.csrf import csrf_exempt
 
 
+
+#
+def get_todolist_json(request):
+    todolist_item = Task.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize('json', todolist_item))
+
+
+# TODO: belom bener
+def add_todolist_item(request):
+    if request.method == 'POST':
+        title = request.POST.get("title")
+        description = request.POST.get("description")
+
+        new_barang = Task(user=request.user, title=title, description=description, date=datetime.datetime.now(), is_finished=False)
+        new_barang.save()
+
+        return HttpResponse(b"CREATED", status=201)
+
+    return HttpResponseNotFound()
+
+@csrf_exempt 
+def deleteTask(request, pk):
+    if request.method =='DELETE' :
+        task_selected = Task.objects.get(id=pk)
+        Task.delete(task_selected)
+    
+        return HttpResponse(b"DELETED", status=201)
+    
+    return HttpResponseNotFound()
+    
 
 
 # Show html function
