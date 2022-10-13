@@ -40,10 +40,10 @@ def deleteTask(request, pk):
     if request.method =='DELETE' :
         task_selected = Task.objects.get(id=pk)
         Task.delete(task_selected)
+
+        return JsonResponse(b"DELETED", status=201)
     
-        return HttpResponse(b"DELETED", status=201)
-    
-    return HttpResponseNotFound()
+
     
 
 

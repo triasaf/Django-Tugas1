@@ -67,7 +67,7 @@
           <p class="card-text">Not Finished</p>
           {% endif %}
           
-          <button class="bg-green-500 rounded-2xl p-2 text-white font-bold delete" onclick="deleteTask(${item.pk})">Delete</button>
+          
           
         </div>
       </div>
@@ -85,12 +85,12 @@
     return false
   }
 
-  function deleteTask(val) {
-    console.log(111);
-    fetch("{% url 'todolist:deleteTask' ${val} %}", {
-      method: "DELETE"
-    })
-  }
+  // function deleteTask(val) {
+  //   console.log(111);
+  //   fetch(`{% url 'todolist:deleteTask' 1 %}`, {
+  //     method: "DELETE"
+  //   }).then(refreshTodolist)
+  // }
 
   document.getElementById("addtaskbutton").onclick = addTodolist
   
